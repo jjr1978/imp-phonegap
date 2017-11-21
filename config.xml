@@ -8,6 +8,7 @@
         Rentas Rio Grande
     </author>
     <content src="https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=157" />
+    <icon src="res/rg_254.png" />
     <allow-navigation href="https://aplicacionesapex.dir.riogrande.gob.ar/*" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
