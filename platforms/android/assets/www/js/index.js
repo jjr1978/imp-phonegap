@@ -18,6 +18,7 @@
  */
 var app = {
     // Application Constructor
+    //https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
@@ -27,20 +28,57 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
+    //  this.receivedEvent('deviceready');
+      //  document.getElementById("networkInfo").addEventListener("click", checkConnection);
+      document.addEventListener("offline", this.onOffline, false);
+      document.addEventListener("online", this.onOnline, false);
+      this.checkConnection();
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+      /*  var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');*/
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+    /*    listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');*/
 
         console.log('Received Event: ' + id);
+    },
+
+  checkConnection: function(){
+    var networkState = navigator.connection.type;
+    if (networkState == Connection.NONE){
+      this.onOffline();
+    } else{
+    //  var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
+     var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
+      ref.addEventListener('loaderror', this.loadErrorCallBack);
     }
+  },
+
+  onOffline: function() {
+    var offlineElement = document.querySelector('.offline');
+    var serverdownElement = document.querySelector('.serverdown');
+    serverdownElement.setAttribute('style','display:none');
+    offlineElement.setAttribute('style', 'display:block;');
+   },
+
+  onOnline: function() {
+      var offlineElement = document.querySelector('.offline');
+      offlineElement.setAttribute('style', 'display:none;');
+      var serverdownElement = document.querySelector('.serverdown');
+      serverdownElement.setAttribute('style','display:none');
+      var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
+   },
+
+   loadErrorCallBack: function(){
+     var serverdownElement = document.querySelector('.serverdown');
+     serverdownElement.setAttribute('style','display:block');
+     var offlineElement = document.querySelector('.offline');
+     offlineElement.setAttribute('style', 'display:none;');
+   }
 };
 
 app.initialize();
