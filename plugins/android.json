@@ -24,6 +24,9 @@
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
     }
   },
   "dependent_plugins": {}

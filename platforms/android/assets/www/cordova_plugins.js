@@ -222,6 +222,39 @@ module.exports = [
     "clobbers": [
       "navigator.splashscreen"
     ]
+  },
+  {
+    "id": "cordova-plugin-advanced-http.lodash",
+    "file": "plugins/cordova-plugin-advanced-http/www/lodash.js",
+    "pluginId": "cordova-plugin-advanced-http"
+  },
+  {
+    "id": "cordova-plugin-advanced-http.tough-cookie",
+    "file": "plugins/cordova-plugin-advanced-http/www/umd-tough-cookie.js",
+    "pluginId": "cordova-plugin-advanced-http"
+  },
+  {
+    "id": "cordova-plugin-advanced-http.local-storage-store",
+    "file": "plugins/cordova-plugin-advanced-http/www/local-storage-store.js",
+    "pluginId": "cordova-plugin-advanced-http"
+  },
+  {
+    "id": "cordova-plugin-advanced-http.cookie-handler",
+    "file": "plugins/cordova-plugin-advanced-http/www/cookie-handler.js",
+    "pluginId": "cordova-plugin-advanced-http"
+  },
+  {
+    "id": "cordova-plugin-advanced-http.angular-integration",
+    "file": "plugins/cordova-plugin-advanced-http/www/angular-integration.js",
+    "pluginId": "cordova-plugin-advanced-http"
+  },
+  {
+    "id": "cordova-plugin-advanced-http.http",
+    "file": "plugins/cordova-plugin-advanced-http/www/advanced-http.js",
+    "pluginId": "cordova-plugin-advanced-http",
+    "clobbers": [
+      "cordova.plugin.http"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -232,7 +265,8 @@ module.exports.metadata =
   "cordova-plugin-file": "4.3.3",
   "cordova-plugin-file-transfer": "1.6.3",
   "cordova-plugin-network-information": "1.3.3",
-  "cordova-plugin-splashscreen": "4.1.0"
+  "cordova-plugin-splashscreen": "4.1.0",
+  "cordova-plugin-advanced-http": "1.9.0"
 };
 // BOTTOM OF METADATA
 });
