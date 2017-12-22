@@ -53,7 +53,8 @@ var app = {
       this.onOffline();
     } else{
     //  var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
-     var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
+  //    cordova.plugin.http.setHeader('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', 'Header', 'Value');
+      var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
       ref.addEventListener('loaderror', this.loadErrorCallBack);
     }
   },
