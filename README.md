@@ -1,6 +1,6 @@
 # README #
 
-Pasos para compilar la aplicacion apk en Android:
+* Pasos para compilar la aplicacion apk en Android:
 * Recordar cambiar numero de Version en config.xml
 * cordova build --release android
 * Renombrar y copiar en carpeta impuestos-apk el archivo android-release-unsigned.apk del directorio especificado en la salida a impuestos-mrg.apk
