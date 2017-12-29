@@ -16,9 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var ref;
 var app = {
     // Application Constructor
     //https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161
+
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
@@ -30,11 +32,19 @@ var app = {
     onDeviceReady: function() {
     //  this.receivedEvent('deviceready');
       //  document.getElementById("networkInfo").addEventListener("click", checkConnection);
+      var offlineElement = document.querySelector('.offline');
+      offlineElement.setAttribute('style', 'display:none;');
+      var serverdownElement = document.querySelector('.serverdown');
+      serverdownElement.setAttribute('style','display:none');
+      document.addEventListener("backbutton", this.onBackKeyDown, false);
       document.addEventListener("offline", this.onOffline, false);
       document.addEventListener("online", this.onOnline, false);
       this.checkConnection();
     },
 
+    onBackKeyDown: function() {
+      navigator.app.exitApp();
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -54,8 +64,13 @@ var app = {
     } else{
     //  var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
   //    cordova.plugin.http.setHeader('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', 'Header', 'Value');
-      var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
-      ref.addEventListener('loaderror', this.loadErrorCallBack);
+      var targetUrl = 'https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161';
+      window.location.replace(targetUrl);
+  //    ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_self', 'location=no');
+    /*  ref.addEventListener('loaderror', this.loadErrorCallBack);
+      ref.addEventListener('loadstop', this.loadStopCallBack);
+      ref.addEventListener('exit',function () { navigator.app.exitApp();});*/
+
     }
   },
 
@@ -64,6 +79,7 @@ var app = {
     var serverdownElement = document.querySelector('.serverdown');
     serverdownElement.setAttribute('style','display:none');
     offlineElement.setAttribute('style', 'display:block;');
+
    },
 
   onOnline: function() {
@@ -71,7 +87,12 @@ var app = {
       offlineElement.setAttribute('style', 'display:none;');
       var serverdownElement = document.querySelector('.serverdown');
       serverdownElement.setAttribute('style','display:none');
-      var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
+      var targetUrl = 'https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161';
+      window.location.replace(targetUrl);
+    /*  ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_self', 'location=no');
+      ref.addEventListener('loaderror', this.loadErrorCallBack);
+      ref.addEventListener('loadstop', this.loadStopCallBack);
+      ref.addEventListener('exit',function () { navigator.app.exitApp();});*/
    },
 
    loadErrorCallBack: function(){
@@ -79,7 +100,26 @@ var app = {
      serverdownElement.setAttribute('style','display:block');
      var offlineElement = document.querySelector('.offline');
      offlineElement.setAttribute('style', 'display:none;');
+   },
+
+   loadStopCallBack: function(){
+     var serverdownElement = document.querySelector('.serverdown');
+     serverdownElement.setAttribute('style','display:none');
+     var offlineElement = document.querySelector('.offline');
+     offlineElement.setAttribute('style', 'display:none;');
+   },
+
+   exitCallBack: function(){
+     var serverdownElement = document.querySelector('.serverdown');
+     serverdownElement.setAttribute('style','display:none');
+     var offlineElement = document.querySelector('.offline');
+     offlineElement.setAttribute('style', 'display:none;');
+
    }
+
+
+
+
 };
 
 app.initialize();
