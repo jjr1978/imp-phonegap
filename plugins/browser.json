@@ -1,0 +1,37 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "gob.riogrande.impuestos"
+    }
+  }
+}

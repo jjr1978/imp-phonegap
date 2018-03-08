@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Impuestos Rio Grande",
+  "short_name": "Impuestos Rio Grande",
+  "version": "gob.riogrande.impuestos",
+  "description": "Aplicación para consulta y pago de impuestos del Municipio de Rio Grande.",
+  "author": "Rentas Rio Grande",
+  "icons": [
+    {
+      "src": "res/rg_254.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}
