@@ -45,5 +45,5 @@
     <plugin name="cordova-plugin-advanced-http" spec="^1.9.0" />
     <engine name="android" spec="^6.3.0" />
     <engine name="browser" spec="^5.0.3" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>
