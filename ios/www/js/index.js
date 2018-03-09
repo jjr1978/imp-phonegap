@@ -64,7 +64,7 @@ var app = {
     } else{
     //  var ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_blank', 'location=no');
   //    cordova.plugin.http.setHeader('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', 'Header', 'Value');
-      var targetUrl = 'https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=169';
+      var targetUrl = 'https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161';
       window.location.replace(targetUrl);
   //    ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_self', 'location=no');
     /*  ref.addEventListener('loaderror', this.loadErrorCallBack);
@@ -87,7 +87,7 @@ var app = {
       offlineElement.setAttribute('style', 'display:none;');
       var serverdownElement = document.querySelector('.serverdown');
       serverdownElement.setAttribute('style','display:none');
-      var targetUrl = 'https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=169';
+      var targetUrl = 'https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161';
       window.location.replace(targetUrl);
     /*  ref = cordova.InAppBrowser.open('https://aplicacionesapex.dir.riogrande.gob.ar/ords/f?p=161', '_self', 'location=no');
       ref.addEventListener('loaderror', this.loadErrorCallBack);
