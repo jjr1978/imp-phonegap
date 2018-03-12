@@ -3,7 +3,7 @@
     <name>Impuestos Rio Grande</name>
     <description>
         Aplicación para consulta y pago de impuestos del Municipio de Rio Grande.
-    </description>
+    </description>  
     <author email="sistemas@riogrande.gob.ar" href="http://www.riogrande.gob.ar">
         Rentas Rio Grande
     </author>
@@ -20,6 +20,8 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <icon src="res/rg_icon-58.png" platform="ios" width="58" height="58" />
+    <icon src="res/rg_icon-87.png" platform="ios" width="87" height="87" />
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
