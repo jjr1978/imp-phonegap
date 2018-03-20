@@ -21,7 +21,10 @@
         <allow-intent href="market:*" />
     </platform>
     <icon src="res/rg_icon-58.png" platform="ios" width="58" height="58" />
+    <icon src="res/rg_icon-76.png" platform="ios" width="76" height="76" />
     <icon src="res/rg_icon-87.png" platform="ios" width="87" height="87" />
+    <icon src="res/rg_icon-120.png" platform="ios" width="120" height="120" />
+    <icon src="res/rg_icon-152.png" platform="ios" width="152" height="152" />
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
